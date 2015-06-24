@@ -1,0 +1,122 @@
+# !/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import sys,time
+import os,commands,shlex
+from uiautomator import device as d
+
+###########gestures##############
+#click
+def click_txt(txt):
+	if d(text=txt).exists:
+		d(text=txt).click()
+
+def click_txt_rscId(txt,rscId):
+	if d(text=txt,resourceId=rscId).exists:
+		d(text=txt,resourceId=rscId).click()
+
+def long_click_txt(txt):
+	if d(text=txt).exists:
+		d(text=txt).long_click()
+
+def long_click_txt_rscId(txt,rscId):
+	if d(text=txt,resourceId=rscId).exists:
+		d(text=txt,resourceId=rscId).long_click()
+
+#scroll
+# # scroll backward vertically
+def scroll_vert_forward():
+	d(scrollable=True).scroll.vert.forward()
+
+def scroll_vert_backward():
+	d(scrollable=True).scroll.vert.backward()
+# scroll to Beginning vertically
+def scroll_vert_toBeginning():
+	d(scrollable=True).scroll.toBeginning()
+
+def scroll_vert_toEnd():
+	d(scrollable=True).scroll.toEnd()
+
+def scroll_horiz_forward():
+	d(scrollable=True).scroll.horiz.forward()
+
+def scroll_horiz_backward():
+	d(scrollable=True).scroll.horiz.backward()
+
+def scroll_horiz_toBeginning():
+	d(scrollable=True).scroll.horiz.toBeginning()
+
+def scroll_horiz_toEnd():
+	d(scrollable=True).scroll.horiz.toEnd()
+
+# scroll forward vertically until specific ui object appears
+def  scroll_to_txt(txt):
+	d(scrollable=True).scroll.to(text=txt)
+	# if d(text=scroll_to_text).exists:
+	# 	print "the text" + scroll_to_text + " exists"
+
+#swipe
+def swipe_left_rscId(rscId,timeout=50):
+	if d(resourceId=rscId).wait.exists(timeout=timeout):
+		d(resourceId=rscId).swipe.left()
+
+def swipe_right_rscId(rscId,timeout=50):
+	if d(resourceId=rscId).wait.exists(timeout=timeout):
+		d(resourceId=rscId).swipe.right()
+
+def swipe_up_className(className,timeout=50):
+	if d(className=className).wait.exists(timeout=timeout):
+		d(className=className).swipe.up()
+
+def swipe_down_rscId(rscId,timeout=50):
+	if d(resourceId=rscId).wait.exists(timeout=timeout):
+		d(resourceId=rscId).swipe.down()
+
+#drag
+# drag the ui object to another ui object(center)
+def drag_txt1_to_txt2(txt1,txt2):
+	d(text=txt1).drag.to(text=txt2, steps=50)
+
+# drag the ui object to point (x, y)
+def drag_txt_to_xy(txt,x,y,steps=100):
+	d(text=txt).drag.to(x, y, steps)
+
+############Partial Behavior##################
+def swipe_to_applist():
+	swipe_left_rscId("com.nokia.z:id/secondTopMostLayout")
+	# swipe_up_className("android.widget.RelativeLayout")
+
+#long click options
+def longClick_AppInfo(txt):
+	long_click_txt_rscId(txt,"com.nokia.z:id/rowTextView")
+	click_txt_rscId("App Info","com.nokia.z:id/edit_actions")
+
+def longClick_Hide(txt):
+	long_click_txt_rscId(txt,"com.nokia.z:id/rowTextView")
+	click_txt_rscId("Hide","com.nokia.z:id/edit_ranking")
+
+def longClick_Uninstall_OK(txt):
+	long_click_txt_rscId(txt,"com.nokia.z:id/rowTextView")
+	click_txt_rscId("Uninstall","com.nokia.z:id/edit_actions")
+	click_txt_rscId("OK","android:id/button1")
+
+	# if d(textContains="Uninstall finished.").wait.exists(timeout=500):
+	# 	print 'Uninstall finished.' 
+	# else:
+	# 	print 'There is no "Uninstall finished." message' 
+	
+def longClick_Uninstall_Cancel(txt):
+	long_click_txt_rscId(txt,"com.nokia.z:id/rowTextView")
+	click_txt_rscId("Uninstall","com.nokia.z:id/edit_actions")
+	click_txt_rscId("Cancel","android:id/button2")
+
+def click_Settings():
+
+	# if d(text='Settings').exists:
+	# 	d(text='Settings').click()
+	if d(text='Settings',resourceId="com.nokia.z:id/rowTextView").exists:
+		d(text='Settings',resourceId="com.nokia.z:id/rowTextView").click()
+
+def waiting():
+	d(text='Settings',resourceId="com.nokia.z:id/rowTextView").wait.exists(timeout=500)
+

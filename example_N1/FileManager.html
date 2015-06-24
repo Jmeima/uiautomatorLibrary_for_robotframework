@@ -1,0 +1,973 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>FileManager</title>
+</head>
+<body>
+<h1>FileManager</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Suite Setup</td>
+<td>i18n detector</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Test Setup</td>
+<td>start server</td>
+<td>#start uiautomator server</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>../lib/install.py</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>../lib/gestures.py</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>../lib/core.py</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="testcase">
+<tr>
+<th class="name" colspan="5">Test Cases</th>
+</tr>
+<tr>
+<td class="name"><a name="test_405-0004">405-0004</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Click All Page Btn to redirect to All Page</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click_txt_rscId</td>
+<td>所有</td>
+<td>com.nineifriend.gaia:id/selector_name</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt_rscid</td>
+<td>所有</td>
+<td>com.nineifriend.gaia:id/selector_name</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_405-0005">405-0005</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Click Photo Btn to redirect to Photo page</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click_txt_rscId</td>
+<td>图片</td>
+<td>com.nineifriend.gaia:id/selector_name</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt_rscid</td>
+<td>图片</td>
+<td>com.nineifriend.gaia:id/selector_name</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_405-0006">405-0006</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Click Video Btn to redirect to Video page</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click_txt_rscId</td>
+<td>视频</td>
+<td>com.nineifriend.gaia:id/selector_name</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt_rscid</td>
+<td>视频</td>
+<td>com.nineifriend.gaia:id/selector_name</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_405-0007">405-0007</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Click Audio Btn to redirect to Audio page</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click_txt_rscId</td>
+<td>音乐</td>
+<td>com.nineifriend.gaia:id/selector_name</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt_rscid</td>
+<td>音乐</td>
+<td>com.nineifriend.gaia:id/selector_name</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_405-0008">405-0008</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Click Doc Btn to redirect to Doc page</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click_txt_rscId</td>
+<td>文档</td>
+<td>com.nineifriend.gaia:id/selector_name</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt_rscid</td>
+<td>文档</td>
+<td>com.nineifriend.gaia:id/selector_name</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_405-0009">405-0009</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Click Display Btn to check List mode can change to Thumb mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${mode}</td>
+<td>Set Variable</td>
+<td>List</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>InitDisplayMode</td>
+<td>${mode}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click_rscId</td>
+<td>com.nineifriend.gaia:id/action_display_mode</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_rscid</td>
+<td>com.nineifriend.gaia:id/item_thumb</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_405-0010">405-0010</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Click Display Btn to check Thumb mode can change to List mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${mode}</td>
+<td>Set Variable</td>
+<td>Thumb</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>InitDisplayMode</td>
+<td>${mode}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click_rscId</td>
+<td>com.nineifriend.gaia:id/action_display_mode</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${result} =</td>
+<td>Run Keyword And Return Status</td>
+<td>wait_until_contain_rscid</td>
+<td>com.nineifriend.gaia:id/item_thumb</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>60</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>'${result}' == 'True'</td>
+<td>Fail</td>
+<td>'Thumb mode change to List mode Fail'</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_405-0011">405-0011</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Click More Option Btn to check the option list appear</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click_rscId</td>
+<td>com.nineifriend.gaia:id/action_more</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt_rscid</td>
+<td>重新整理</td>
+<td>com.nineifriend.gaia:id/title</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt_rscid</td>
+<td>排序 (依名称)</td>
+<td>com.nineifriend.gaia:id/title</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt_rscid</td>
+<td>新增文件夹</td>
+<td>com.nineifriend.gaia:id/title</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt_rscid</td>
+<td>设定</td>
+<td>com.nineifriend.gaia:id/title</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_425-0001">425-0001</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Click Folder to check the path is right</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>get_txt_by_rscId</td>
+<td>com.nineifriend.gaia:id/item_name</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click_rscId</td>
+<td>com.nineifriend.gaia:id/item_name</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt_rscid</td>
+<td>${text}</td>
+<td>com.nineifriend.gaia:id/path_back_name</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_425-0002">425-0002</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Click ! Btn to check the folder/file info</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click_rscId</td>
+<td>com.nineifriend.gaia:id/item_option</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_rscid</td>
+<td>com.nineifriend.gaia:id/detail_file_title</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt</td>
+<td>位置</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_rscid</td>
+<td>com.nineifriend.gaia:id/detail_location_content</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt</td>
+<td>修改时间</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_rscid</td>
+<td>com.nineifriend.gaia:id/detail_modifytime_content</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt</td>
+<td>大小</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_rscid</td>
+<td>com.nineifriend.gaia:id/detail_size_content</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_425-0003">425-0003</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Long press folder to check the folder is selected</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>get_txt_by_index_rscId</td>
+<td>0</td>
+<td>com.nineifriend.gaia:id/item_name</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>long_click_by_index_rscId</td>
+<td>0</td>
+<td>com.nineifriend.gaia:id/item_name</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_right_contain_txt_className</td>
+<td>${text}</td>
+<td>android.widget.ImageView</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt</td>
+<td>复制</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt</td>
+<td>移动</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt</td>
+<td>删除</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt</td>
+<td>重新命名</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_425-1001">425-1001</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Tap other folder to check the folder is selected</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>get_txt_by_index_rscId</td>
+<td>0</td>
+<td>com.nineifriend.gaia:id/item_name</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>long_click_by_index_rscId</td>
+<td>0</td>
+<td>com.nineifriend.gaia:id/item_name</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_right_contain_txt_className</td>
+<td>${text}</td>
+<td>android.widget.ImageView</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt</td>
+<td>复制</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt</td>
+<td>移动</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt</td>
+<td>删除</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_contain_txt</td>
+<td>重新命名</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${text}</td>
+<td>get_txt_by_index_rscId</td>
+<td>1</td>
+<td>com.nineifriend.gaia:id/item_name</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click_by_index_rscId</td>
+<td>1</td>
+<td>com.nineifriend.gaia:id/item_name</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>wait_until_right_contain_txt_className</td>
+<td>${text}</td>
+<td>android.widget.ImageView</td>
+<td>60</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_480-0009">480-0009</a></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">Launch&amp;Exit FileManager App Stress Test</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Setup]</td>
+<td>Start_App</td>
+<td>com.nineifriend.gaia</td>
+<td>com.nineifriend.gaia.activity.AgreeActivity</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>: FOR</td>
+<td>${INDEX}</td>
+<td>IN RANGE</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>500</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>press_home</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>swipe_to_applist</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>scroll_to_txt</td>
+<td>${filemanager}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>click_txt_rscId</td>
+<td>${filemanager}</td>
+<td>com.nokia.z:id/rowTextView</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td>Terminate_App</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keywords</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Start_App">Start_App</a></td>
+<td>[Arguments]</td>
+<td>${PKG}</td>
+<td>${ACT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>screen_on</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>home screen</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>launch_app</td>
+<td>${PKG}</td>
+<td>${ACT}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Terminate_App">Terminate_App</a></td>
+<td>[Arguments]</td>
+<td>${PKG}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>exit_app</td>
+<td>com.nineifriend.gaia</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>press_home</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep_mode</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_InitDisplayMode">InitDisplayMode</a></td>
+<td>[Arguments]</td>
+<td>${mode}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click_txt_rscId</td>
+<td>图片</td>
+<td>com.nineifriend.gaia:id/selector_name</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${result} =</td>
+<td>Run Keyword And Return Status</td>
+<td>wait_until_contain_rscid</td>
+<td>com.nineifriend.gaia:id/item_thumb</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>60</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword If</td>
+<td>('${mode}' == 'List' and '${result}' == 'True') or ('${mode}' == 'Thumb' and '${result}' == 'False')</td>
+<td>click_rscId</td>
+<td>com.nineifriend.gaia:id/action_display_mode</td>
+</tr>
+</table>
+</body>
+</html>

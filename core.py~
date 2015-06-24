@@ -1,0 +1,121 @@
+__version__ = '0.1'
+# !/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import sys,time
+import os,commands,shlex
+from uiautomator import device as d
+
+#server 
+def install_server():
+	command_line='adb push /home/jueimei/autoSys/pyAndroid/bundle.jar /data/local/tmp|adb push /home/jueimei/autoSys/pyAndroid/uiautomator-stub.jar /data/local/tmp'
+	f = os.popen(command_line)
+	f = f.read() 
+	print f
+
+def start_server():
+	command_line='adb shell uiautomator runtest bundle.jar uiautomator-stub.jar -c com.github.uiautomatorstub.Stub &'
+	f = os.popen(command_line)
+	f = f.read() 
+	print f
+
+def screenshot():
+	d.screenshot("home.png")
+
+#system behavior
+def home_screen():
+	d.press.menu()
+
+def screen_on():
+	d.screen.on()
+
+def sleep_mode():
+	d.sleep()
+
+#system btn
+def press_back():
+	d.press.back()
+
+def press_home():
+	d.press.home()
+
+def press_recent():
+	d.press.recent()
+
+#notification
+def open_notification():
+	d.open.notification()
+
+def quick_settings():
+	d.open.notification()
+	d.open.quick_settings()
+
+#wait
+# wait until the ui object appears
+def wait_until_txt_time(txt,timeout=15):
+	d(text=txt).wait.exists(timeout=timeout)
+
+# wait until the ui object gone
+def wait_until_txt_gone(txt,timeout=15):
+	d(text=txt).wait.gone(timeout=timeout)
+
+def wait_until_window_idle():
+	d.wait.idle()
+
+def wait_until_window_update():
+	d.wait.update()
+
+def wait_until_contain_txt(txt):
+	d(textContains=txt).wait.exists()
+#	if d(textContains=txt).wait.exists(timeout=timeout):
+#		print 'The page contains "' + txt + '"' 
+#	else:
+#		print 'Cannot find "'+ txt + '"' 
+
+#rotation
+
+def rotate_left():
+	d.orientation = "l" # "left"
+
+def rotate_right():
+	d.orientation = "r" # "right"
+
+def rotate_auto():
+	d.orientation = "n" # "natural"
+
+def rotate_freeze():
+	d.freeze_rotation()
+
+def rotate_info():
+	print 'Rotation info: ' + (d.orientation)
+
+def reset():
+	pass
+
+def reboot():
+	pass
+
+def launch():
+	pass
+
+def storage():
+	# click_txt_rscId("Settings","com.nokia.z:id/rowTextView")
+	# click_txt_rscId("Storage","com.android.settings:id/title")
+	# if d(className="android.widget.ImageButton",description="More options").exists:
+	# 	d(className="android.widget.ImageButton",description="More options").click()
+	# click_txt_rscId("USB computer connection","android:id/title")
+
+	#if d(index="1",resourceId="android:id/widget_frame").child(resourceId="android:id/checkbox").checkable() = True:
+	# for x in range(0,2):
+		if d(index="1",resourceId="android:id/widget_frame").child(resourceId="android:id/checkbox").exists:
+			d(index="1",resourceId="android:id/widget_frame").child(resourceId="android:id/checkbox").click()
+
+def input_pw():	
+	if d(resourceId="com.android.settings:id/password").exists:
+		d(resourceId="com.android.settings:id/password").set_text("88888888")
+#start_server()
+#press_home()
+# storage()
+
+# for x in range(2):
+# 	print x
